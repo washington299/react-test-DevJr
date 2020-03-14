@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Header, Title } from '../../utils/GlobalStyles';
+import ProductsHeader from './Header';
 
 const ProductsArea = () => (
-  <Header pt={45}>
-    <Title>Produtos</Title>
-  </Header>
+  <>
+    <ProductsHeader />
+  </>
 );
 
 export default ProductsArea;
