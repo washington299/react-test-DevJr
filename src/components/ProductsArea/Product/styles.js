@@ -16,6 +16,9 @@ export default styled.div`
   }
 
   .product-item--background {
+    .product-item--img {
+      width: 100%;
+    }
     .product-item--name,
     .product-item--price {
       color: #546e7a;
@@ -24,9 +27,14 @@ export default styled.div`
       font-size: 22px;
       font-weight: bold;
     }
+    .product-item--different-prices {
+      color: #b0bdc4;
+      font-size: 14px;
+      margin-top: 10px;
 
-    img {
-      width: 100%;
+      p {
+        margin: 5px 0;
+      }
     }
   }
 `;
