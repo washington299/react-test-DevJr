@@ -25,3 +25,7 @@ export const Title = styled.h1`
   padding: 15px 0;
   border-bottom: 1px solid #eee;
 `;
+
+export const ProductStyle = styled.div`
+  background: #aaa;
+`;
