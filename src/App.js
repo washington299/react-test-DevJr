@@ -1,11 +1,15 @@
 import React from 'react';
 
-import { GlobalStyles } from './utils/GlobalStyles';
+import ProductArea from './components/ProductsArea';
+
+import { GlobalStyles, Container } from './utils/GlobalStyles';
 
 const App = () => (
   <div className="App">
     <GlobalStyles />
-    Hello React.Js
+    <Container>
+      <ProductArea />
+    </Container>
   </div>
 );
 
