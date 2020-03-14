@@ -6,6 +6,7 @@ const initalState = {
       price: 1.499,
       installmentPrice: 124.92,
       cashPrice: 1349,
+      quantity: 0,
     },
     {
       id: 2,
@@ -13,6 +14,7 @@ const initalState = {
       price: 299,
       installmentPrice: 24.92,
       cashPrice: 269.1,
+      quantity: 0,
     },
     {
       id: 3,
@@ -20,6 +22,7 @@ const initalState = {
       price: 729,
       installmentPrice: 60.75,
       cashPrice: 656.1,
+      quantity: 0,
     },
     {
       id: 4,
@@ -27,6 +30,7 @@ const initalState = {
       price: 549,
       installmentPrice: 45.75,
       cashPrice: 494.1,
+      quantity: 0,
     },
     {
       id: 5,
@@ -34,6 +38,7 @@ const initalState = {
       price: 2.899,
       installmentPrice: 241.58,
       cashPrice: 2609.1,
+      quantity: 0,
     },
     {
       id: 6,
@@ -41,6 +46,7 @@ const initalState = {
       price: 149,
       installmentPrice: 12.42,
       cashPrice: 134.1,
+      quantity: 0,
     },
     {
       id: 7,
@@ -48,6 +54,7 @@ const initalState = {
       price: 1.099,
       installmentPrice: 91.58,
       cashPrice: 989.1,
+      quantity: 0,
     },
     {
       id: 8,
@@ -55,6 +62,7 @@ const initalState = {
       price: 149,
       installmentPrice: 12.42,
       cashPrice: 134.1,
+      quantity: 0,
     },
   ],
   total: 0,
