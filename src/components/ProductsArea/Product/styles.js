@@ -15,7 +15,7 @@ export default styled.div`
     }
   }
 
-  .product-item--background {
+  .product-item__background {
     .product-item--img {
       width: 100%;
     }
