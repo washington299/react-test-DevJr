@@ -37,4 +37,14 @@ export default styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 960px) {
+    width: 33%;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 530px) {
+    width: 100%;
+  }
 `;
