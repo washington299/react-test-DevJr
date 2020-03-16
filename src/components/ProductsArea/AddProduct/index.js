@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { IoMdAddCircle, IoMdRemoveCircle } from 'react-icons/io';
 
+import { Error } from '../../../utils/GlobalStyles';
 import Styles from './styles';
 
 const AddProduct = ({ quantity }) => {
   const [productQuantity, setProductQuantity] = useState(quantity);
+  const [addError, setAddError] = useState(false);
 
   function decrementQuantity() {
     if (productQuantity === 0) return;
@@ -14,6 +16,10 @@ const AddProduct = ({ quantity }) => {
   function incrementQuantity() {
     if (productQuantity === 99) return;
     setProductQuantity(productQuantity + 1);
+  }
+
+  function handleAddButton() {
+    if (productQuantity > 0 ? setAddError(false) : setAddError(true));
   }
 
   return (
@@ -35,9 +41,18 @@ const AddProduct = ({ quantity }) => {
           onClick={incrementQuantity}
         />
       </div>
-      <button type="button" className="add-product__button">
+      <button
+        type="button"
+        className="add-product__button"
+        onClick={handleAddButton}
+      >
         ADICIONAR
       </button>
+      {addError && (
+        <Error style={{ textAlign: 'center' }}>
+          Nenhum produto selecionado
+        </Error>
+      )}
     </Styles>
   );
 };

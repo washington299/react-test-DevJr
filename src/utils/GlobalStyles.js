@@ -38,3 +38,11 @@ export const Title = styled.h1`
 export const ProductStyle = styled.div`
   background: #aaa;
 `;
+
+export const Error = styled.span`
+  display: block;
+  color: #f00;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 5px;
+`;
