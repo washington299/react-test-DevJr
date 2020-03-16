@@ -27,7 +27,9 @@ const Product = ({ products }) => {
                     {`${formatCurrency(cashPrice)} à vista (10% de desconto)`}
                   </p>
                 </div>
-                {id === showAddArea && <AddProduct quantity={quantity} />}
+                {id === showAddArea && (
+                  <AddProduct id={id} quantity={quantity} price={price} />
+                )}
               </div>
             </div>
           </ProductStyles>

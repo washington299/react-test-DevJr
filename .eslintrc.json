@@ -27,6 +27,7 @@
     "react/prop-types": "off",
     "object-curly-newline": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "jsx-a11y/control-has-associated-label": "off"
+    "jsx-a11y/control-has-associated-label": "off",
+    "no-case-declarations": "off"
   }
 }

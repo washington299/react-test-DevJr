@@ -76,6 +76,18 @@ const initalState = {
   total: 0,
 };
 
-const productsReducer = (state = initalState, action) => state;
+const productsReducer = (state = initalState, action) => {
+  switch (action.type) {
+    case 'ADD_PRODUCT':
+      const product = state.products.filter(
+        myProduct => myProduct.id === action.payload.id,
+      );
+      product[0].quantity += action.payload.quantity;
+      state.products[product[0].id - 1] = product[0];
+      return { ...state, total: state.total + action.payload.value };
+    default:
+      return state;
+  }
+};
 
 export default productsReducer;

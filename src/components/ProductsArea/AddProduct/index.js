@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { IoMdAddCircle, IoMdRemoveCircle } from 'react-icons/io';
+
+import addProduct from '../../../reducers/productsAction';
 
 import { Error } from '../../../utils/GlobalStyles';
 import Styles from './styles';
 
-const AddProduct = ({ quantity }) => {
+const AddProduct = ({ id, quantity, price, dispatch }) => {
   const [productQuantity, setProductQuantity] = useState(quantity);
   const [addError, setAddError] = useState(false);
 
@@ -19,7 +22,14 @@ const AddProduct = ({ quantity }) => {
   }
 
   function handleAddButton() {
-    if (productQuantity > 0 ? setAddError(false) : setAddError(true));
+    if (productQuantity === 0) {
+      setAddError(true);
+      return;
+    }
+
+    const value = productQuantity * price;
+    dispatch(addProduct(id, productQuantity, value));
+    setAddError(false);
   }
 
   return (
@@ -57,4 +67,4 @@ const AddProduct = ({ quantity }) => {
   );
 };
 
-export default AddProduct;
+export default connect(null)(AddProduct);
