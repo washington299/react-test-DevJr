@@ -2,14 +2,40 @@ import styled from 'styled-components';
 
 export const FormStyles = styled.form`
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 40px;
+
+  .form__area--name,
+  .form__area--email {
+    width: 40%;
+  }
+  .form__area--select {
+    width: 20%;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .form__area--name,
+    .form__area--email {
+      width: 50%;
+    }
+    .form__area--select {
+      width: 200px;
+    }
+  }
+  @media only screen and (max-width: 530px) {
+    .form__area--name,
+    .form__area--email,
+    .form__area--select {
+      width: 100%;
+    }
+  }
 `;
 
 export const Input = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 15px;
-  flex: ${props => props.size};
+  height: 100%;
+  margin: 0 10px;
 
   label {
     margin-bottom: 5px;
@@ -35,6 +61,10 @@ export const Input = styled.div`
   select {
     height: 100%;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 960px) {
+    margin: 10px;
   }
 `;
 
