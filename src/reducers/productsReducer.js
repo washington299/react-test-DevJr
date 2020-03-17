@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const initalState = {
   products: [
     {
@@ -79,11 +80,17 @@ const initalState = {
 const productsReducer = (state = initalState, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
+      // get product i want to add to cart.
       const product = state.products.filter(
         myProduct => myProduct.id === action.payload.id,
       );
-      product[0].quantity += action.payload.quantity;
-      state.products[product[0].id - 1] = product[0];
+      // move the product to a constant.
+      const purchasedProduct = product[0];
+      // sum the product's quantity plus the quantity we selected when added the product to cart.
+      purchasedProduct.quantity += action.payload.quantity;
+      // replace the product with the new quantity to the state.
+      state.products[purchasedProduct.id - 1] = purchasedProduct;
+      // return the new state with products selected and the new total.
       return { ...state, total: state.total + action.payload.value };
     default:
       return state;
