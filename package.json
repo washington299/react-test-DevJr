@@ -2,11 +2,12 @@
   "name": "xbrain-test-vaga-fe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://washington299.github.io/react-test-DevJr",
+  "homepage": "http://washington299.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "env-cmd": "^10.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-hook-form": "^5.0.3",
@@ -18,12 +19,10 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "start": "env-cmd -f .env.development react-scripts start",
+    "build": "env-cmd -f .env.production react-scripts build",
+    "predeploy": "env-cmd -f .env.production yarn build",
+    "deploy": "gh-pages master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

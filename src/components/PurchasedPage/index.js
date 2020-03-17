@@ -17,7 +17,7 @@ const PurchasedPage = ({ user, total, dispatch }) => {
   }
 
   function handleButton() {
-    window.location.href = '/';
+    window.location.href = process.env.REACT_APP_URL;
   }
 
   return (
@@ -29,7 +29,10 @@ const PurchasedPage = ({ user, total, dispatch }) => {
           <span>{formatCurrency(total)}</span>
           foi finalizada com sucesso
         </div>
-        <img src="images/purchase.png" alt="Compra realizada com sucesso" />
+        <img
+          src={`${process.env.REACT_APP_URL}images/purchase.png`}
+          alt="Compra realizada com sucesso"
+        />
         <button type="button" onClick={handleButton}>
           INICIAR NOVA COMPRA
         </button>
