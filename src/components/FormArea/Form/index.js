@@ -3,15 +3,16 @@ import { connect } from 'react-redux';
 import { useForm } from 'react-hook-form';
 
 import formatCurrency from '../../../utils/formatCurrency';
+import addUser from '../../../reducers/usersAction';
 
 import { Error } from '../../../utils/GlobalStyles';
 import { FormStyles, Input, PurchaseArea } from './styles';
 
-const Form = ({ total }) => {
+const Form = ({ total, dispatch }) => {
   const { register, handleSubmit, errors } = useForm();
 
   function submit(data) {
-    console.log(data);
+    dispatch(addUser(data));
   }
 
   return (
@@ -68,8 +69,10 @@ const Form = ({ total }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  total: state.products.total,
-});
+const mapStateToProps = state => {
+  const { total } = state.products;
+
+  return { total };
+};
 
 export default connect(mapStateToProps)(Form);
