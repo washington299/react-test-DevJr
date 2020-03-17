@@ -17,7 +17,7 @@ const PurchasedPage = ({ user, total, dispatch }) => {
   }
 
   function handleButton() {
-    history.push('/');
+    window.location.href = '/';
   }
 
   return (

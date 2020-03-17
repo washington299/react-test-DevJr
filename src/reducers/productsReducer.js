@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-const initalState = {
+const initialState = {
   products: [
     {
       id: 1,
@@ -77,7 +77,7 @@ const initalState = {
   total: 0,
 };
 
-const productsReducer = (state = initalState, action) => {
+const productsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
       // get product i want to add to cart.
