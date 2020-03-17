@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
@@ -12,8 +12,14 @@ import { FormStyles, Input, PurchaseArea } from './styles';
 const Form = ({ total, dispatch }) => {
   const { register, handleSubmit, errors } = useForm();
   const history = useHistory();
+  const [purchaseError, setPurchaseError] = useState(false);
 
   function submit(data) {
+    if (total === 0) {
+      setPurchaseError(true);
+      return;
+    }
+
     dispatch(addUser(data));
     history.push('/purchased');
   }
@@ -67,6 +73,7 @@ const Form = ({ total, dispatch }) => {
           value="FINALIZAR COMPRA"
           onClick={handleSubmit(submit)}
         />
+        {purchaseError && <Error>Selecione um produto</Error>}
       </PurchaseArea>
     </>
   );
