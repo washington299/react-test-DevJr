@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 
 import formatCurrency from '../../../utils/formatCurrency';
 import addUser from '../../../reducers/usersAction';
@@ -10,9 +11,11 @@ import { FormStyles, Input, PurchaseArea } from './styles';
 
 const Form = ({ total, dispatch }) => {
   const { register, handleSubmit, errors } = useForm();
+  const history = useHistory();
 
   function submit(data) {
     dispatch(addUser(data));
+    history.push('/purchased');
   }
 
   return (

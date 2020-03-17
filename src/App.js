@@ -1,16 +1,14 @@
 import React from 'react';
 
-import ProductsArea from './components/ProductsArea';
+import Routes from './services/routes';
 
 import { GlobalStyles, Container } from './utils/GlobalStyles';
-import FormArea from './components/FormArea';
 
 const App = () => (
   <div className="App">
     <GlobalStyles />
     <Container>
-      <ProductsArea />
-      <FormArea />
+      <Routes />
     </Container>
   </div>
 );
