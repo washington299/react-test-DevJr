@@ -4,7 +4,7 @@ Há um tempo atrás me candidatei a uma vaga para desenvolvedor junior em [React
 alguns dias depois recebi um desafio feito pela empresa para classificar os dev's para entrevista,
 o desafio era o seguinte:
 
-- Contruir as páginas de **Produto** e **Finalização de Compra** com base nos arquivos disponíveis
+- Construir as páginas de **Produto** e **Finalização de Compra** com base nos arquivos disponíveis
 (são os arquivos que estão dentro de public/images).
 
 - Implementar as telas responsivas.
