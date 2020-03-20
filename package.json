@@ -2,7 +2,7 @@
   "name": "xbrain-test-vaga-fe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://washington299.github.io/react-test-DevJr",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -19,9 +19,9 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
-    "start": "env-cmd -f .env.development react-scripts start",
-    "build": "env-cmd -f .env.production react-scripts build",
-    "predeploy": "env-cmd -f .env.production yarn build",
+    "start": "env-cmd -f .env.development.local react-scripts start",
+    "build": "env-cmd -f .env.production.local react-scripts build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages master -d build"
   },
   "eslintConfig": {
