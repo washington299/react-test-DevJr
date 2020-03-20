@@ -68,11 +68,9 @@ const Form = ({ total, dispatch }) => {
       <PurchaseArea>
         <h2>{`Total: ${formatCurrency(total)}`}</h2>
         <input type="hidden" name="total" ref={register} value={total} />
-        <input
-          type="submit"
-          value="FINALIZAR COMPRA"
-          onClick={handleSubmit(submit)}
-        />
+        <button type="submit" onClick={handleSubmit(submit)}>
+          FINALIZAR COMPRA
+        </button>
         {purchaseError && <Error>Selecione um produto</Error>}
       </PurchaseArea>
     </>

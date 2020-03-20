@@ -79,7 +79,7 @@ export const PurchaseArea = styled.div`
     margin-bottom: 5px;
     color: #546e7a;
   }
-  input {
+  button {
     border: none;
     border-radius: 5px;
     color: #fff;
